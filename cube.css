@@ -1,0 +1,51 @@
+@keyframes nit {
+    0%{
+        /* transform: rotateX(25deg) rotateY(deg); */
+    }
+    100%{
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+.cube {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  margin: 100px;
+  left: 20%;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform: rotateX(25deg) rotateY(-25deg);
+  animation: nit 5s ease-in-out alternate infinite;
+}
+.face {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transition: all 1s;
+}
+.one {
+  background-color: skyblue;
+  transform: translateZ(20px);
+}
+.two {
+  background-color: orange;
+  transform: rotateY(90deg) translate(100px) translateZ(110px);
+}
+.three{
+    background-color: yellow;
+    transform: rotateY(-90deg) translate(-100px) translateZ(110px);
+}
+.four{
+    background-color: gray;
+    transform: rotateX(90deg) translateZ(110px) translateY(-100px);
+}
+.five{
+    background-color: green;
+    transform: translateZ(-210px);
+}
+.six{
+    background-color: red;
+    transform: rotateX(90deg) translateY(-100px) translateZ(-110px);
+}
